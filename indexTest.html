@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+</head>
+<body>
+    <figure>
+        <figcaption>
+            <div style="color:white;"></div>
+            Registration
+        </figcaption>
+    </figure>
+
+    <form action="insertTest.php" onsubmit = "return validate()" method="POST" name="student" align="center" enctype="multipart/form-data">
+        <br><br><br><br>
+        <div style="color: white">       
+        UPRN &nbsp;   &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp;    
+        <input maxlength="11" style="border-color:rgb(0, 0, 0);border-radius: 10px" type="text" placeholder="  your uprn" name="uprn"><br><br>
+       Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+        <input style="border-color:rgb(0, 0, 0);border-radius: 10px" type="text" placeholder="  your name"name="name"><br><br>
+       Department
+        <input type="text" placeholder="  your department" name="dept" style="border-color:rgb(0, 0, 0);border-radius: 10px">
+          <br><br>
+           Upload your image(optional)
+           <input type="file" name="myfile" id="fileToUpload">
+          <br><br>
+           <input  type="submit"  name="submit" value="Register" style="border-color:rgb(0, 0, 0);border-radius: 10px;color: white;font-family: montserrat;background-color: rgb(55, 77, 141)">
+           <br><br><br>Already registerd??<br><br><br> <a href="dataIndex.html">Check your details</a>
+           <br><br><br> <font size="2" face="monospace">(C) Sivaprasad 2019</font>
+        </div>
+    </form>
+    <script language="javascript">
+    function validate()
+    {
+        var x=document.forms["student"]["uprn"].value;
+        var y=document.forms["student"]["dept"].value;
+        var z=document.forms["student"]["name"].value;
+        if(x==""){
+        alert("Input Uprn");
+        return false;}
+        else if(y=="")
+        {
+            alert("Enter department name");
+            return false;
+        }
+        else if(z=="")
+        {
+            alert("Enter Name");
+            return false;
+        }
+    }         
+    </script>
+    
+</body>
+</html>
